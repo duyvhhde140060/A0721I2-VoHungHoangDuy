@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        function formtinhtien(){
+            let nhaptien = document.getElementById("nhaptien").value
+            let Amout = parseInt(nhaptien)
+            let tren = document.getElementById("from").value
+            let to = document.getElementById("to").value
+           if (tren == "Mỹ" && to == "Việt Nam"){  document.getElementById("hienthi").innerHTML = Amout * 22000}
+           if (tren == "Việt Nam" && to == "Mỹ"){
+            document.getElementById("hienthi").innerHTML = Amout / 23000
+           }
+           }
+           
+        
+    </script>
+        Amout 
+        <input type="text" style="margin-right: 100px;" id="nhaptien" >
+        From Currency 
+        <select id="from">
+            <option>Việt Nam</option>
+            <option>Mỹ</option>
+            
+            </select>
+            To Currency 
+            <select style="margin-left: 100px;" id="to">
+                <option>Việt Nam</option>
+            <option>Mỹ</option>
+                </select>
+                <input type="submit" onclick="formtinhtien()" value="submit">
+                <h1 id="hienthi"></h1>
+   
+
+</body>
+</html>
