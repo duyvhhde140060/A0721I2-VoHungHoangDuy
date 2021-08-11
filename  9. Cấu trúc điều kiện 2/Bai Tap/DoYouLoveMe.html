@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: red;">Do You Love Me?</h1><br>
+    <input type="submit" value="Yes" onclick="Yes();" >
+    <input id="N" type="submit" style="margin-left: 80px;" value="No" onmouseover="No();">
+    <script>
+        function Yes(){
+            alert('<3 Yeeu Em 3000')
+        }
+        let btnNo = null;
+        btnNo = document.getElementById("N")
+        function init() {
+    imgObj = document.getElementById('N');
+    imgObj.style.position = 'relative';
+    imgObj.style.left = '0px';
+
+}
+function No() {
+    btnNo.style.top = (Math.random()*300)+"px";
+    btnNo.style.left = (Math.random()*300)+"px";
+    btnNo.style.bottom = (Math.random()*300)+"px";
+}
+window.onload = init;
+       
+    </script>
+
+</body>
+</html>

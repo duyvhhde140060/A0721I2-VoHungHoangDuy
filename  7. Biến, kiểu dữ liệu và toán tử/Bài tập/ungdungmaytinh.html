@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Caculator</h1>
+    <input type="text" id="num1">
+    <input type="text" id="num2"><br><br>
+    <input type="submit" onclick="cong();" value="cộng" id="cong">
+    <input type="submit" onclick="tru();" value="trừ" id="tru">
+    <input type="submit" onclick="nhan();" value="nhân" id="nhan">
+    <input type="submit" onclick="chia();" value="chia" id="chia">
+    <h1 id="ketqua"> </h1> 
+    <script>
+        function cong(){
+            let n1 = parseInt(document.getElementById("num1").value)
+            let n2 = parseInt(document.getElementById("num2").value)
+            let tong = n1 + n2
+            document.getElementById("ketqua").innerHTML = `Resutl add:` + tong
+        }
+        function tru(){
+            let n1 = parseInt(document.getElementById("num1").value)
+            let n2 = parseInt(document.getElementById("num2").value)
+            let tong = n1 - n2
+            document.getElementById("ketqua").innerHTML = `Resutl subtraction :` + tong
+        }
+        function nhan(){
+            let n1 = parseInt(document.getElementById("num1").value)
+            let n2 = parseInt(document.getElementById("num2").value)
+            let tong = n1 * n2
+            document.getElementById("ketqua").innerHTML = `Resutl mul:` + tong
+        }
+        function chia(){
+            let n1 = parseInt(document.getElementById("num1").value)
+            let n2 = parseInt(document.getElementById("num2").value)
+            let tong = n1 / n2
+            document.getElementById("ketqua").innerHTML = `Resutl 
+division:` + tong
+        }
+    </script>
+</body>
+</html>
