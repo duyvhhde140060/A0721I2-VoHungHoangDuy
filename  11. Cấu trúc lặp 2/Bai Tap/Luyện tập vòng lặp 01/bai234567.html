@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <h2>LUYỆN TẬP VÒNG LẶP 1</h2>
+        <input type="button" value="Bai1" onclick="bai1()"><br>
+        <input type="button" value="Bai2" onclick="bai2()"><br>
+        <input type="button" value="Bai3" onclick="bai3()"><br>
+        <input type="button" value="Bai4" onclick="bai4()"><br>
+        <input type="button" value="Bai5" onclick="bai5()"><br>
+        <input type="button" value="Bai6" onclick="bai6()"><br>
+        <input type="button" value="Bai7" onclick="bai7()"><br>
+        <input type="button" value="Bai8" onclick="bai8()"><br>
+    </form>
+     <script>
+         //bài tập 1 : 1-100
+         function bai1() {
+             let i ;
+             for (i = 1; i<100; i++) {
+                 document.write( i + '<br>');
+             }
+         }
+        //bài 2 : 20<nhiệt độ<100
+         function bai2() {
+             let celsius = parseFloat(prompt("Nhập nhiệt độ hiện tại"));
+             if (celsius > 100) {
+                 while (celsius > 100) {
+                     celsius = prompt("Hãy giảm nhiệt độ < 100");
+                 }
+             }
+             if (celsius < 20) {
+                 while (celsius < 20) {
+                     celsius = prompt("Hãy tăng nhiệt độ > 20");
+                 }
+             }
+             alert("Hoàn thành");
+         }
+        //Bài 3: 20 số đầu tiên Fib
+         function bai3() {
+             let fib = [];
+             fib[0] = 0;
+             fib[1] = 1;
+             for (let i = 2; i <= 21; i++) {
+                 fib[i] = fib[i - 2] + fib[i - 1];
+                 document.write(fib[i] + ", ");
+             }
+         }
+         //bài 4 : Fib%5
+         function bai4() {
+             let fib = [];
+             fib[0] = 0;
+             fib[1] = 1;
+             for (let i = 2; i <= 21; i++) {
+                 fib[i] = fib[i - 2] + fib[i - 1];
+                 if (fib[i] % 5 == 0) {
+                     document.write(fib[i] + " là số đầu tiên chia hết cho 5");
+                     break;
+                 }
+             }
+         }
+         //Bài 5 : tổng 20 số đầu tiên Fib
+         function bai5() {
+             let fib = [];
+             fib[0] = 0;
+             fib[1] = 1;
+             let sum = 0;
+             for (let i = 2; i <= 21; i++) {
+                 fib[i] = fib[i - 2] + fib[i - 1];
+                 sum += fib[i];
+             }
+             document.write(sum + " là tổng 20 số đầu tiên trong dãy fibonacci")
+         }
+         //Tổng 30 số %7 đầu tiên
+         function bai6() {
+             let sum = 0;
+             let count = 1;
+             let num = 7;
+             while (count <= 30) {
+                 if (num % 7 == 0) {
+                     count++;
+                     sum += num;
+                 }
+                 num++;
+             }
+             alert(sum);
+         }
+         //FizzBuzz
+         function bai7() {
+             for (let i = 1; i <= 100; i++) {
+                 if (i % 3 == 0) {
+                     document.write(i + " is Fizz" + "<br>");
+                 }
+                 if (i % 5 == 0) {
+                     document.write(i + " is Buzz" + "<br>");
+                 }
+                 if (i % 5 == 0 && i % 3 == 0) {
+                     document.write(i + " is FizzBuzz" + "<br>");
+                 }
+             }
+         }
+     </script>
+</body>
+</html>

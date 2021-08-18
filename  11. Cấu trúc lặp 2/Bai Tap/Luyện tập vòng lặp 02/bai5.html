@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Số tiền: <input type="text" id="tien">
+   Số tháng:  <input type="text" id="sothang">
+    <input type="submit" value="Tính lãi" onclick="tinh();">
+    <script>
+        function tinh(){
+            let goc = document.getElementById("tien").value 
+            let thang = document.getElementById("sothang").value
+            let goc1 = parseInt(goc)
+            let thang1 = parseInt(thang)
+            for(let i =1; i <= thang1; i++){
+                let lai = goc1 / 100 * 2.2
+               
+            let laigoc = goc1 + lai
+          
+            goc1 = laigoc
+           document.writeln("số tiền lãi tháng " +i + ": " + lai.toFixed(2) + "<br>")  
+           document.writeln("số tiền gốc + lãi tháng " +i + ": " + laigoc.toFixed(2) + "<br>")
+                if(i == thang1){
+                    let laii = laigoc - goc
+                    document.writeln(" Lãi sau  " +i +" "+"tháng"+ ": " + laii.toFixed(2) + "<br>")
+                }
+         }
+        
+         
+           
+        }
+    </script>
+</body>
+</html>
