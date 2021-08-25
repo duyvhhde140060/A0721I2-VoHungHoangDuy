@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Game caro</h3>
+<div id="caro"></div>
+
+
+<script>
+let array = Array();
+let isPerson1 = true;
+function init() {
+    for (let i = 0; i < 5; i++){
+        array[i] = Array();
+        for(let j = 0; j < 5; j++){
+            array[i][j] = "";
+        }
+    }
+}
+
+function showCaro() {
+    let result = "<table border='1' cellpadding='50px' style='border-collapse: collapse'>";
+    for (let i = 0; i < 5; i++) {
+        result += "<tr>";
+        for (let j = 0; j < 5; j++){
+            result += "<td onclick='changeCaro("+ i +","+ j +")'>" + array[i][j] + "</td>";
+        }
+        result += "</td>"
+    }
+    document.getElementById("caro").innerHTML = result;
+}
+
+function changeCaro(x,y) {
+    if (array[x][y] === "X" || array[x][y] === "O"){
+        alert("Ô này đã bị đánh!")
+    }
+    else {
+        if (isPerson1){
+            array[x][y] = "X";
+            checkWinner("X");
+            isPerson1 = false;
+        }else {
+            array[x][y] = "O";
+            checkWinner("O");
+            isPerson1 = true;
+        }
+    }
+    showCaro();
+}
+
+function checkWinner(temp) {
+    for (let i = 0; i < 5; i++){
+        for (let j = 0; j < 3 ; j++){
+            if (array[i][j]===temp && array[i][j+1]===temp && array[i][j+2]===temp){
+                alert(`${temp} là người thắng`);
+                init();
+                showCaro();
+            }
+        }
+    }
+    for (let i =0; i< 3; i++){
+        for (let j = 0; j < 5 ; j++){
+            if (array[i][j]===temp && array[i+1][j]===temp && array[i+2][j]===temp){
+                alert(`${temp} là người thắng`);
+                init();
+                showCaro();
+            }
+        }
+        for (let j = 0; j < 3 ; j++){
+            if (array[i][j]===temp && array[i+1][j+1]===temp && array[i+2][j+2]===temp){
+                alert(`${temp} là người thắng`);
+                init();
+                showCaro();
+            }
+        }
+        for (let j = 2; j < 5; j++) {
+            if (array[i][j] === temp && array[i + 1][j - 1] === temp && array[i + 2][j - 2] === temp) {
+                alert(`${temp} là người thắng`);
+                init();
+                showCaro();
+            }
+        }
+    }
+}
+
+
+init();
+showCaro();
+</script>
+</body>
+</html>

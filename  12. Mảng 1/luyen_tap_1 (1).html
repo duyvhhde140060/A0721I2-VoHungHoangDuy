@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Bài 1" onclick="bai1()">
+<input type="button" value="Bài 2" onclick="bai2()">
+<input type="button" value="Bài 3" onclick="bai3()">
+<input type="button" value="Bài 4" onclick="bai4()">
+<input type="button" value="Bài 5" onclick="bai5()">
+<input type="button" value="Bài 6" onclick="bai6()">
+<input type="button" value="Bài 7" onclick="bai7()">
+<input type="button" value="Bài 8" onclick="bai8()">
+<input type="button" value="Bài 9" onclick="bai9()">
+<script>
+    function bai1() {
+        let arr = [20, 13, 52, 20, 4, 16, 3, 45, 9, 10];
+        for (let value in arr) {
+            if (arr[value] >= 10) {
+                document.write(arr[value] + " &nbsp&nbsp");
+            }
+        }
+    }
+
+    function bai2() {
+        let arr = [2, 3, 52, 20, 4, 16, 3, 45, 9, 10];
+        for (let value in arr) {
+            if (arr[value] >= 10) {
+                document.write("index: " + value + " = " + arr[value] + " &nbsp&nbsp" + "<br>");
+            }
+        }
+    }
+    function bai3() {
+        let arr = [5, 9, 8, 3, 55, 94];
+        let max = arr[0];
+        let sum = 0;
+        let average = 0;
+        for (let value in arr) {
+            sum += arr[value];
+            average = sum / arr.length;
+            if (max <= arr[value]) {
+                max = arr[value];
+            }
+        }
+        document.write("The average of the elements in the array is: " + average.toFixed(2) + "<br>");
+        document.write(max + " is greatest values");
+    }
+    function bai4() {
+        let arr = [2, 6, 4, 9, 8, 7]; // => 7 8 9 4 6 2
+        // document.write(arr.reverse());
+        for (let i = 0; i < arr.length/2; i++) {
+            let temp = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = temp;
+        }
+        document.write(arr);
+    }
+    function bai5() {
+        let numbers = [-8, 5, -9, 0, -6, 1, -2];
+        let count = 0;
+        for (let index in numbers) {
+            if (numbers[index] < 0 && Number.isInteger(numbers[index])) {
+                count++;
+            }
+        }
+        document.write("The number of elements with a negative value is: " + count);
+    }
+    function bai6() {
+        let v = parseInt(prompt("nhập"));
+
+        let arr = [1, 2, 3, 4, 5, 3];
+
+        if (arr.includes(v)) {
+            alert(v + " is in the array");
+        } else {
+            alert(v + " is not in the array");
+        }
+    }
+    function bai7() {
+        let v = parseInt(prompt("Enter a number: "));
+        let arr = [1, 2, 3, 4, 5, 3];
+        let newArr = arr.filter(function (item) {
+            return item !== v
+        });
+        newArr.push(0);
+        document.write(arr.join("&nbsp") + "<br>");
+        document.write("=> " + newArr.join("&nbsp"));
+    }
+    function bai8() {
+        let arr = [8, -5, 2, 6, 18, 1, 0];
+        function printArray() {
+            document.write("Mảng chưa sắp xếp: " + arr.join("&nbsp&nbsp&nbsp") + "<br>");
+        }
+        function bubbleSortDecrease() {
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = arr.length - 1; j > i; j--) {
+                    if (arr[j-1] < arr[j]) {
+                        let temp = arr[j-1];
+                        arr[j-1] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+        }
+        printArray();
+        bubbleSortDecrease();
+        document.write("Mảng theo thứ tự giảm dần: " + arr.join("&nbsp&nbsp&nbsp&nbsp"));
+    }
+    function bai9() {
+        let a = ["Tôi", "đang", "bận"];
+        let b = ["Tôi", "phải", "học"];
+        let c = b.concat(a);
+        document.write(c.join("&nbsp"));
+    }
+</script>
+</body>
+</html>

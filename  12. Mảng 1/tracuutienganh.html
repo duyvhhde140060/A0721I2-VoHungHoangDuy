@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  Nhập từ cần tra:  <input type="text" id="text1"> 
+  <form name="otrong">
+    <textarea name="txt" cols="40" rows="10" onkeydown="typeTextarea();"></textarea>
+</form>
+  <input type="submit" value="Translate" onclick="chuyendoi();">
+  <script>
+       let a1 = ["hello", "thanks"]
+          let a2 = ["xin chào", "cảm ơn"]
+      function chuyendoi(){
+       let a = document.getElementById('text1').value 
+       for(let i = 0; i <= a1.length -1; i++){
+           if(a == a1[i]){
+               let a3 =""
+               a3 = a2[i]
+               console.log(a2[i])
+               document.otrong.txt.value = a+ ` chuyển đổi sang tiếng việt là `+ a3
+           }
+       }
+
+      }
+  </script>
+</body>
+</html>
