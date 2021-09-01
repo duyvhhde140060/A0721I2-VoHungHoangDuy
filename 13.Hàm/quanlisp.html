@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tableProduct">
+
+    </div>
+
+    <script>
+        
+         let danhSachSanPham = ["Apple", "Samsung", "Xiaomi"];
+         hienthisp()
+        function hienthisp(){
+            let result = "";
+        result += "<table id='tableProduct'><th>Ten san pham<td></td><td colspan='2'>" + danhSachSanPham.length + " products</td></th>"
+        for (let index = 0; index < danhSachSanPham.length; index++) {
+            result += "<tr><td>" + danhSachSanPham[index] + "</td>" +
+                "<td><button onclick='edit(" + index + ")'>Edit</button></td>" +
+                "<td><button onclick='deleteProduct(" + index + ")'>Delete</button></td>" +
+              
+                "</tr>";
+        }
+        result += "</table>";
+        document.getElementById("tableProduct").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

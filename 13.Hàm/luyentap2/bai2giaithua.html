@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     let soa = parseInt(prompt("nhập a"))
+     let result = giaithua(soa)
+     document.write(result)
+     
+     function giaithua(number){
+        let result1;
+        for(let i = 1; i <= number; i++){
+            result1 = number * i
+            console.log(result1);
+        }
+        
+        return result1;
+     }
+     
+    </script>
+</body>
+</html>

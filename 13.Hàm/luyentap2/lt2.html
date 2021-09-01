@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 2 function</title>
+</head>
+<body>
+    <button onclick="bai1()">Bài 1</button><br><br>
+    <button onclick="bai2()">Bài 2</button><br><br>
+    <button onclick="bai3()">Bài 3</button><br><br>
+    <button onclick="bai4()">Bài 4</button><br><br>
+    <button onclick="bai5()">Bài 5</button><br><br>
+    <button onclick="bai6()">Bài 6</button><br><br>
+    <button onclick="bai7()">Bài 7</button><br><br>
+    <button onclick="bai8()">Bài 8</button><br><br>
+    <button onclick="bai9()">Bài 9</button>
+    <script>
+        function bai4() {
+            let char = parseInt(prompt("Enter a character"));
+            alert(checkCharacter(char));
+            function checkCharacter(a) {
+                if (isNaN(a)) {
+                    return false;
+                } else {
+                    return true;
+                }
+
+            }
+
+        }
+        function bai5() {
+            let a = parseInt(prompt("Enter the first number"));
+            let b = parseInt(prompt("Enter the seconds number"));
+            let c = parseInt(prompt("Enter the seconds number"));
+            alert(" The minimum value is " + minimumvalue(a, b, c));
+
+            function minimumvalue(x, y, z) {
+                if (x <= y && x <= z) {
+                    return x;
+                } else if (y <= z) {
+                    return y;
+                } else {
+                    return z;
+                }
+            }
+        }
+
+        function bai6() {
+            let number = parseInt(prompt("Enter a Integer number "));
+            alert(positiveNumber(number));
+            function positiveNumber(n) {
+                if (n <= 0) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        }
+
+        function bai7() {
+            let a = 1;
+            let b = 2;
+            alert("Before swap : " + a + " _ " + b);
+            alert("After swap : " + swap(a, b));
+            function swap( x, y) {
+                return [y, x].join(" _ ");
+            }
+        }
+
+        function bai8() {
+            let arr = Array(parseInt(prompt("Nhập số phần tử trong Mảng")));
+            for (let i =0; i < arr.length; i++) {
+                arr[i] = parseInt(prompt("a[" + i + "]="));
+            }
+            alert("Array imported: " + arr );
+            alert("Array reverse: " + reverseArray(arr));
+            function reverseArray(arr) {
+                return arr.reverse(arr);
+            }
+        }
+    </script>
+</body>
+</html>
