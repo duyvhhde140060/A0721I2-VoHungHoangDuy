@@ -8,27 +8,25 @@
 </head>
 <body>
     <script>
-        function chuyendoi(C){
-   this.C = C;
-   
-}
-this.getC = function(){
-    return this.getC
-}
+let chuyendoi = function(C) {
+
+this.C = C;
+
+this.getC = function() {
+    return C;
+};
 this.getF = function() {
-    return C * 1.8000+ 32.00
+    return C + 237.5;
 }
 this.getKenvin = function() {
-    return C + 273,15;
-}
-this.setF = function(F) {
-    this.F  = F;
+    return C * 1.8;
 }
 
-let DC = new chuyendoi(2);
-let FC = DC.getF()
-let KC = DC.getKenvin()
-document.write(DC,FC,KC)
+};
+let circle = new chuyendoi(2);
+let radius = circle.getF();
+let area = circle.getKenvin();
+alert("radius: " + radius + "; area: " + area);
 
 
     </script>
