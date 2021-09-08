@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #c3c3c3;">
+Trình duyệt của bạn không hỗ trợ thẻ canvas trong HTML5.
+</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#FF0000";
+
+
+class hcn {
+    constructor(cd,cr){
+        this.cd = cd
+        this.cr = cr
+        
+    }
+
+    dientich(){
+       return this.cd *this.cr
+       
+    }
+    chuvi(){
+        return (this.cd +this.cr)*2
+    }
+    
+}
+let tinh = new hcn(50,40);
+let c1 = tinh.cd
+let c2 = tinh.cr
+ctx.fillRect(50,25,c1,c2);
+
+console.log(tinh.dientich())
+console.log(tinh.chuvi())
+</script>
+
+</body>
+</html>

@@ -9,7 +9,7 @@
     class Mobile {
         constructor() {
             this.pin = 100;
-            this.status = true;
+            this.status = false;
             // vùng nhớ soạn tin
             this.memoryDraft ="";
             // vung nhớ tin nhắn đã gửi
@@ -65,14 +65,26 @@
         }
 
     }
-
-    let nokia = new Mobile();
+    let n1 = new Mobile();
+     
+    if(this.status == false){
+        let kh= confirm("kích hoạt điện thoại")
+        if(kh){
+            let nokia = new Mobile();
+            console.log("Điện thoại đã bật")
     let iphone = new Mobile();
     nokia.guiTin(iphone,"xin chào iphone");
     nokia.guiTin(iphone,"khỏe không bạn");
     iphone.hienThiTinDen();
     iphone.guiTin(nokia,"xin chao nokia.Mình khỏe");
     nokia.hienThiTinDen();
+        }
+        else{
+     alert("vui lòng kích hoạt sdt")
+    }
+   
+    }
+    
 </script>
 </body>
 </html>
