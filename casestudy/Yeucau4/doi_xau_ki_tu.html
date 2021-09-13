@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Nhập Xâu Kí Tự <input type="text" id="nhap">
+    <button onclick="chuyendoi()">Chuyen Doi</button>
+    <script>
+        function chuyendoi() {
+            let b = ""
+            let a = document.getElementById("nhap").value
+            console.log(typeof(a))
+           b= a.toLowerCase()
+           b = a.charAt(0).toUpperCase()
+            for (let i = 1; i < a.length; i++) {
+                if(a.charAt(i -1) == " " && a.charAt(i) == " "){
+                    a.substring(i,1)
+                    
+                }
+                else if (a.charAt(i -1) == " " ) {
+                 b +=  a.charAt(i).toUpperCase()
+                   
+                }
+               
+                else{
+                    b += a.charAt(i)
+                }
+              
+            }
+
+            console.log(b)
+        }
+    </script>
+</body>
+
+</html>

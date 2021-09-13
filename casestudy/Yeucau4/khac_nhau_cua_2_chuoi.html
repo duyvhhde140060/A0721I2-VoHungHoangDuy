@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let s1 = "aabcc" 
+        let s2 = "adcaa"
+        let s3 =""
+        let s4 = ""
+        let giong = 0
+        for(let i = 0; i < s1.length;i++){
+            for(let j = 0; j<s2.length; j++){
+                if(s1.charAt(i) == s2.charAt(j)){
+                    s3 += s1.charAt(i)
+                }
+            }
+        }
+        for(let i = 0; i < s3.length;i++){
+            for(let j = 1; i < s3.length; j++){
+                if(s3.charAt(i) == s3.charAt(j)){
+                   s4 =  s3.replace(s3.charAt(i), '')
+                }
+            }
+        }
+        document.write("diem giong nhau cua 2 chuoi la: "+s4)
+    </script>
+</body>
+</html>

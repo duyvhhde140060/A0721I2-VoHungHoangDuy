@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="nhapso">
+    <button onclick="Chuyen()">ChuyenDoi</button>
+    <script>
+        let mang = []
+        function Chuyen(){
+            let so = parseInt(document.getElementById("nhapso").value )
+            do{
+                let so1 = so % 10
+            switch(so1){
+                case 1: mang.push("Mot")
+                break
+                case 2: mang.push("Hai")
+                break
+                case 3: mang.push("Ba")
+                break
+                case 4: mang.push("Bon")
+                break
+                case 5: mang.push("Nam")
+                break
+                case 6: mang.push("Sau")
+                break
+                case 7: mang.push("Bay")
+                break
+                case 8: mang.push("Tam")
+                break
+                case 9: mang.push("Chin")
+                break
+                default: mang.push("Khong")
+               
+            }
+             so= so /10
+             so = so.toFixed(0)
+            }while(so > 0.9)
+            const list = mang.reverse()
+
+document.write(list)
+        }
+       
+    </script>
+</body>
+</html>

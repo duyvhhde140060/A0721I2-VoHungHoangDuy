@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text " id="duy">
+    <button onclick="chay()">Chay</button>
+
+    </div>
+    <script>
+        let a = ["1:Cafe", "2: Cam vắt", "3:Nước ép cà rốt ", "4: Nước ép cà chua","5: Nước lọc", "6: Nước dừa" ]
+       document.write(a)
+       
+       
+      function chay(){
+        let b = parseInt(document.getElementById("duy").value)
+        switch(b){
+           case 1: alert("Ban da chon Cafe")
+           break
+           case 2: alert("Ban da chon Cam vat")
+           break
+           case 3: alert("Ban da chon Nước ép cà rốt")
+           break
+           case 4: alert("Ban da chon Nước ép cà chua")
+           break
+           case 5: alert("Ban da chon  Nước lọc")
+           break
+           case 6: alert("Ban da chon Nước dừa")
+           break
+          default :alert("Vui long chon lai nuoc uong")
+           break
+       }
+      }
+    </script>
+</body>
+</html>
