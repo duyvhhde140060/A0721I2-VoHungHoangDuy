@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="nhapso()">Nhap so</button>
+    <button onclick="random()">RanDom</button>
+    <button onclick="check()">Check so random</button>
+
+
+    <script>
+        let mangnhapso = []
+        let mangrandom = []
+        let mangtrung = [1,2,3,4,5,6]
+        function nhapso(){
+            for(let i = 0; i < 6; i++){
+                let n = parseInt(prompt("nhap so thu: "+i))
+                mangnhapso.push(n)
+            }
+            console.log(mangnhapso)
+        }
+        function random(){
+            for(let i = 1; i <= 6; i++){
+               let n =   Math.floor(Math.random() * 100);
+                mangrandom.push(n)
+            }
+            console.log(mangrandom)
+        }
+
+        let dem = 0;
+        function check(){
+            if(mangrandom[0] == mangtrung[0] && mangrandom[1] == mangtrung[1] && mangrandom[2] == mangtrung[2]
+             && mangrandom[3] == mangtrung[3] && mangrandom[4] == mangtrung[4] && mangrandom[5] == mangtrung[5] ){
+
+             console.log("ban da trung so doc dac")
+             
+                
+            }
+            else if (mangrandom[1] == mangtrung[1] && mangrandom[2] == mangtrung[2]
+             && mangrandom[3] == mangtrung[3] && mangrandom[4] == mangtrung[4] && mangrandom[5] == mangtrung[5]){
+                console.log("ban da trung giai nhat")
+               
+             }
+             else if(mangrandom[3] == mangtrung[3] && mangrandom[4] == mangtrung[4] && mangrandom[5] == mangtrung[5]){
+                console.log("ban da trung giai ba")
+               
+             }
+            else if(mangnhapso[0] == mangtrung[0] && mangnhapso[1] == mangtrung[1] && mangnhapso[2] == mangtrung[2]
+             && mangnhapso[3] == mangtrung[3] && mangnhapso[4] == mangtrung[4] && mangnhapso[5] == mangtrung[5] ){
+
+             console.log("ban da trung so doc dac")
+                
+            }
+            else if (mangnhapso[1] == mangtrung[1] && mangnhapso[2] == mangtrung[2]
+             && mangnhapso[3] == mangtrung[3] && mangnhapso[4] == mangtrung[4] && mangnhapso[5] == mangtrung[5]){
+                console.log("ban da trung giai nhat")
+             }
+             else if(mangnhapso[3] == mangtrung[3] && mangnhapso[4] == mangtrung[4] && mangnhapso[5] == mangtrung[5]){
+                console.log("ban da trung giai ba")
+             }
+
+             else{
+                 console.log("chuc ban may man lan sau")
+              
+             }
+        }
+     
+        
+    </script>
+</body>
+</html>
